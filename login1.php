@@ -116,6 +116,7 @@ input {
 h4 {
   background-color:#4c93af;
   color:black;
+  border-radius:5%;
 }
 
 </style>
