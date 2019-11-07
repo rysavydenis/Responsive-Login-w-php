@@ -9,6 +9,8 @@ session_start();
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
+
+
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
@@ -119,6 +121,38 @@ h4 {
   border-radius:5%;
 }
 
+
+    #myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -10;
+}
+
+
+/* Style the button used to pause/play the video */
+#myBtn {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  background: #000;
+  color: rgb(0, 0, 0);
+  color:rgb(241, 239, 239);
+  cursor: pointer;
+  position:absolute;
+  bottom:-190px;
+
+}
+
+#myBtn:hover {
+  background: rgb(53, 53, 65);
+  color: white;
+}
+
+
 </style>
 </head>
 <body>
@@ -191,12 +225,14 @@ echo $theForm;
 
 
 
-
+   <video autoplay muted loop id="myVideo">
+                <source src="Pexels Videos 4552.mp4" type="video/mp4">
+              </video>
 
 </div>
 
 
-
+<button id="myBtn" onclick="myFunction()">Pause</button>
 <div id="footer">
     <p>&copy; 2019 exampleFooter.com<p>
 </div>
@@ -215,6 +251,25 @@ function myFunction() {
     x.className = "topnav";
   }
 }
+</script>
+
+    <script>
+            // Get the video
+            var video = document.getElementById("myVideo");
+            
+            // Get the button
+            var btn = document.getElementById("myBtn");
+            
+            // Pause and play the video, and change the button text
+            function myFunction() {
+              if (video.paused) {
+                video.play();
+                btn.innerHTML = "Pause";
+              } else {
+                video.pause();
+                btn.innerHTML = "Play";
+              }
+            }
 </script>
 </body>
 </html>

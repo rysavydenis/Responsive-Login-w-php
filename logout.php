@@ -18,11 +18,8 @@ session_destroy();
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background-image:url('pic.jpg');
-  background-repeat:no-repeat;
-  background-size:cover;
-  align:center;
   background-color: hsla(0,0%,10%,0.70);
+  background-color:#1C1C1C;
   background-blend-mode: overlay;
   
 }

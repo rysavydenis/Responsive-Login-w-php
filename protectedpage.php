@@ -12,7 +12,6 @@ session_start();
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background-image:url('pic.jpg');
   background-repeat:no-repeat;
   background-size:cover;
   align:center;
